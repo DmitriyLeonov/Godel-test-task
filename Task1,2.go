@@ -38,6 +38,39 @@ func main() {
 			seatNumber: "7A",
 		},
 	}
+	//task1
 	p.Info()
+	fmt.Println("--------------------")
 	planeInfo(p)
+
+	fmt.Println("--------------------")
+	//task2
+	var planes [3]Plane=[3]Plane{
+		p,
+		{
+			manufacturer:  "Airbus",
+			model:         "A320",
+			seats:         165,
+			maxSpeed:      845,
+			passengerInfo: Passenger{
+				name:       "Dmitry",
+				surname:    "Leonov",
+				seatNumber: "7A",
+			},
+		},
+		{
+			manufacturer:  "Cessna",
+			model:         "172",
+			seats:         2,
+			maxSpeed:      302,
+			passengerInfo: Passenger{
+				name:       "Dmitry",
+				surname:    "Leonov",
+				seatNumber: "7A",
+			},
+		},
+	}
+	for i:=0;i<len(planes);i++{
+		fmt.Println(i,"|",planes[i].manufacturer,planes[i].model)
+	}
 }
