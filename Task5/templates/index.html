@@ -1,6 +1,8 @@
 {{ define "index" }}
 {{ template "header" }}
-<h1>Объявления</h1>
+<main class="px-3">
+    <h1>Объявления</h1>
+    <p class="lead">
     {{ range . }}
     <ul>
         {{ range .Photo_links }}
@@ -13,7 +15,11 @@
     <p>Name {{ .Name }}</p>
     <p>Price {{ .Price }}</p>
     <p>Description {{ .Description}}</p>
+    <a class="nav-link" href='/{{ .Id }}'>Посмотреть объявление</a>
     {{ end }}
+    </p>
+  </main>
+
     
     {{ template "footer" }}
     {{ end }}

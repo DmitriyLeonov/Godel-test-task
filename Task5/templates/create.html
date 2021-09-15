@@ -2,12 +2,30 @@
 {{ template "header" }}
 <h1>Новое объявление</h1>
 <form action="/save_ad" method="POST">
-    <input type="text" name="name" id="Name"> name<br>
-    <textarea name="description" id="Description" cols="50" rows="10"></textarea><br>
-    <input name="main_photo" id="Photo1"> main_photo</main><br>
-    <input name="photo1" id="Photo2">photo1<br>
-    <input name="photo2" id="Photo3">photo2<br>
-    <input name="price" id="Name">price<br>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Названия объявления</label>
+        <input type="text" class="form-control" name="name" id="Name">
+     </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea name="description" id="Description" class="form-control" rows="3"></textarea>
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Главное фото</label>
+        <input type="text" class="form-control" name="main_photo" id="Photo1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">фото 2</label>
+        <input type="text" class="form-control" name="photo1" id="Photo2">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">фото 3</label>
+        <input type="text" class="form-control" name="mphoto2" id="Photo3">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Цена</label>
+        <input type="text" class="form-control" name="price" id="Price">
+    </div>
     <button>Добавить</button>
 </form>
 {{ template "footer" }}
