@@ -1,7 +1,6 @@
-{{ define "index" }}
+{{ define "ad" }}
 {{ template "header" }}
-<h1>Объявления</h1>
-    {{ range . }}
+<h1>Объявление</h1>
     <ul>
         {{ range .Photo_links }}
         <li><b>{{ . }}</b></li>
@@ -14,6 +13,4 @@
     <p>Price {{ .Price }}</p>
     <p>Description {{ .Description}}</p>
     {{ end }}
-    
     {{ template "footer" }}
-    {{ end }}
