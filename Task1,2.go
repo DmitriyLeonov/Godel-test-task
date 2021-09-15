@@ -1,4 +1,4 @@
-package main
+package Task12
 
 import "fmt"
 
