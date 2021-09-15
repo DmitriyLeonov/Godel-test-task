@@ -1,0 +1,17 @@
+{{ define "index" }}
+{{ template "header" }}
+<h1>Объявления</h1>
+
+    <ul>
+        {{ range .Photo_links }}
+        <li><b>{{ . }}</b></li>
+        {{ else }} 
+        <li><b> No ads </b></li>
+        {{ end }}
+    </ul>
+
+    <p>Name {{ .Name }}</p>
+    <p>Price {{ .Price }}</p>
+    <p>Description {{ .Description}}</p>
+    {{ template "footer" }}
+    {{ end }}

@@ -1,0 +1,14 @@
+{{ define "create" }}
+{{ template "header" }}
+<h1>Новое объявление</h1>
+<form action="/save_ad" method="POST">
+    <input type="text" name="name" id="Name"><br>
+    <textarea name="description" id="Description" cols="50" rows="10"></textarea><br>
+    <input name="main_photo" id="Photo1"><br>
+    <input name="photo1" id="Photo2"><br>
+    <input name="photo2" id="Photo3"><br>
+    <input name="price" id="Name"><br>
+    <button>Добавить</button>
+</form>
+{{ template "footer" }}
+{{ end }}
