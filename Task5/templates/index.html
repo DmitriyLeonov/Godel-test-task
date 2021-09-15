@@ -2,22 +2,33 @@
 {{ template "header" }}
 <main class="px-3">
     <h1>Объявления</h1>
-    <p class="lead">
-    {{ range . }}
-    <ul>
-        {{ range .Photo_links }}
-        <li><b>{{ . }}</b></li>
-        {{ else }} 
-        <li><b> No ads </b></li>
-        {{ end }}
-    </ul>
-
-    <p>Name {{ .Name }}</p>
-    <p>Price {{ .Price }}</p>
-    <p>Description {{ .Description}}</p>
-    <a class="nav-link" href='/{{ .Id }}'>Посмотреть объявление</a>
-    {{ end }}
-    </p>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col order-3">
+          </div>
+          <div class="col order-5">
+            <p class="lead">
+                {{ range . }}
+                <ul>
+                    {{ range .Photo_links }}
+                    <li><b>{{ . }}</b></li>
+                    {{ else }} 
+                    <li><b> No ads </b></li>
+                    {{ end }}
+                </ul>
+            
+                <p>Name {{ .Name }}</p>
+                <p>Price {{ .Price }}</p>
+                <p>Description {{ .Description}}</p>
+                <a class="nav-link" href='/{{ .Id }}'>Посмотреть объявление</a>
+                {{ end }}
+                </p>
+          </div>
+          <div class="col order-3">
+          </div>
+        </div>
+      </div>
+    
   </main>
 
     
